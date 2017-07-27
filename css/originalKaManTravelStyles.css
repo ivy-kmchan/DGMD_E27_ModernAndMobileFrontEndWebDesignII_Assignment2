@@ -1,0 +1,383 @@
+/* This KaManTravelStyles.css is for KaManTravel website, including index.html and about.html*/
+/* All the photos were taken by me.
+
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+	background-color: #9b009b;
+	font-size: 100%;
+}
+
+/* From "http://typecast.com/images/uploads/modernscale.css". Even though some tags are not in the htmls, they may appear in future additional htmls. */
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+h1 {
+	font-family: 'Luckiest Guy', cursive; /* Google Fonts */
+	font-weight: normal;
+}
+
+h2, h3, h4, h5, h6{
+	font-family: 'Amita', cursive; /* Google Fonts */
+	font-weight: normal;
+}
+
+a {
+	color: #2772B0;
+}
+
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+	padding: 0 1em;
+}
+
+nav {
+	background-color: #9298CC;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: auto;
+}
+nav ul li {
+	font-family: 'Halant', "Times New Roman", Times, serif; /* 'Halant' is Google Fonts */
+	font-size: 1.2em;
+	display: inline;
+}
+
+nav ul a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 1em;
+	float: left;
+	display: inline-block;
+}
+
+nav ul a:hover {
+	color: orange;
+	background-color: black;
+}
+
+div.col-1-2 img{
+	max-width: 225px;
+	width: 100%;
+}
+
+article {
+	overflow: auto;
+	padding-top: 0.2em;
+}
+
+article h2{
+	margin-top: 0.9em;
+}
+
+article picture {
+	margin-right: 1.5em;
+	margin-bottom: 0.5em;
+	padding: 1.5em 0 0 0;
+	float: left; 
+}
+
+aside {
+	padding-top: 0.3em;
+}
+
+footer {
+	clear: both;
+	padding: 2em 0;
+	margin: 3em 0;
+	color: maroon;
+	text-align: center;
+}
+
+
+/* GRID SYSTEM */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+[class*='col-'] {
+	margin-left: 4%;
+	float: left;
+	min-height: 1px;
+}
+
+.col-1-2, 
+.col-1-4 {
+	width: 20%;
+}
+
+.col-2 {
+	width: 44%;
+}
+
+.col-3 {
+	width: 68%;
+}
+
+.col-4 {
+	width: 92%;
+}
+
+
+/* MEDIA QUERIES */
+/* Mobile LANDSCAPE Screen Sizes */
+/* pixel range: 480-800px */
+/* In Firefox, when I resized window to 800px width, it showed two columns. However, when I viewed in "View Responsive Layouts", it showed four columns. */  
+@media only screen and 
+	(min-width: 30em) and (max-width: 50em){
+
+	.col-1-2,
+	.col-2  {
+		width: 44%;
+	}
+
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+	}
+}
+
+
+/* Mobile PORTRAIT Screen Sizes */
+/* pixel range: <=480px */
+@media only screen and (max-width: 30em) {
+	[class*='col-'] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+}
+
+
+/* LARGE Screen Width */
+/* pixel range min-width: 704px */
+/* includes type scaling */
+@media only screen and (min-width: 44em){
+	header {
+		background: url(../img/pacifica_shoreline_1200.jpg) no-repeat; /* swap header background image. */
+		width: 1200px;
+		height: 218px;
+		color: #fff;
+		font-size: 1.6em;
+	}
+
+	header h1 {
+		padding: 0.5em;
+		margin: 0;
+		font-size: 2.5em;
+	}
+
+	header h1 a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.col-1-2 h2 {
+ 		font-size: 1.6em ;
+ 		line-height: 2;
+ 	}
+
+ 	.col-1-2 p {
+ 		font-size: 1.1em;
+ 		line-height: 1.5;
+ 	}
+
+	article h2 {
+		font-size: 2.3em;
+		line-height: 1.5;
+	}
+
+	article p {
+		font-size: 1.1em;
+		line-height: 1.6;
+	}
+
+	ul li{
+		font-size: 1.1em;
+		line-height: 1.4;
+	}
+}
+
+
+/* MEDIUM LARGE Screen Width */
+/* pixel range: 704px to 1008px */
+/* includes type scaling */
+@media only screen and (min-width: 44em) and (max-width: 63em) {
+ 	.col-1-2 h2 {
+ 		font-size: 1.5em ;
+ 		line-height: 1.8;
+ 	}
+
+ 	.col-1-2 p {
+ 		font-size: 1.01em;
+ 		line-height: 1.5;
+ 	}
+
+	article h2 {
+		font-size: 1.8em;
+		line-height: 1.3;
+	}
+
+	article p {
+		font-size: 1.1em;
+		line-height: 1.5;
+	}
+
+	ul li{
+		font-size: 1.1em;
+		line-height: 1.4;
+	}
+}
+
+
+/* MEDIUM Screen Width */
+/* pixel range max-width: 704px */
+/* includes type scaling */
+@media only screen and (max-width: 44em) {
+	header {
+		background: url(../img/pacifica_shoreline_710.jpg) no-repeat; /* swap header background image. */
+		width: 100%;
+		height: 150px;
+	}
+
+	header h1 {
+		padding: 100px 0 0 15px;
+		margin: 0;
+		font-size: 2.7em;
+	}
+
+	header h1 a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	nav ul a {
+		display: block;
+		float: none;
+		padding-left:3.333333%;
+	}
+
+	/* splits nav into 2 columns */
+	nav li:nth-child(even) {
+		width: 50%;
+		float: right;
+	}
+
+	nav li:nth-child(odd) {
+		width: 50%;
+		float: left;
+	}
+
+	.col-1-2 h2 {
+ 		font-size: 1.35em ;
+ 		line-height: 1.6;
+ 	}
+
+	.col-1-2 p {
+		font-size: 1.05em; 
+		line-height: 1.5;
+	}
+
+	article h2 {
+		font-size: 1.67em;
+		line-height: 1.3;
+	}
+
+	article p {
+		font-size: 1.05em;
+		line-height: 1.6;
+	}
+
+	ul li{
+		font-size: 1.05em;
+		line-height: 1.4;
+	}
+}
+
+
+/* SMALL Screen Width */
+/* pixel range: <=480px */
+/* includes type scaling */
+@media only screen and (max-width: 30em) {
+	header{
+		height: 130px ;
+	}
+
+	header h1 {
+		padding: 80px 0 0 15px;
+		margin: 0;
+		font-size: 2.2em;
+	}
+
+	nav ul li{
+		font-size: 1em;
+	}
+
+	.col-1-2 h2 {
+ 		font-size: 1.3em ;
+ 		line-height: 1.3;
+ 	}
+
+	.col-1-2 p {
+		font-size: 0.95em; 
+		line-height: 1.5;
+	}
+
+	article h2 {
+		font-size: 1.5em;
+		line-height: 1.5;
+	}
+
+	article p {
+		font-size: 0.95em;
+		line-height: 1.5;
+	}
+
+	ul li{
+		font-size: 0.95em;
+		line-height: 1.4;
+	}
+}
+
+
+/* rearranging the columns in about.html */
+[class*="col-"] {
+	position: relative;
+}
+.col-push-1 {
+	left: 24%;
+}
+.col-pull-3 {
+	left: -72%;
+}
+
+/* MEDIUM Screen Width for re-arranging columns */
+/* pixel: 800 px */
+@media (max-width: 50em) {
+	.col-push-1,
+	.col-pull-3 {
+		left: 0;
+	}
+}

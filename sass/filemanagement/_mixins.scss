@@ -1,0 +1,51 @@
+// Sass Mixins
+@mixin common-header-style{
+	font:{
+		weight: normal;
+		style: normal;
+		variant: $header-font-variant; // Sass Variables
+	}
+}
+
+// Sass Mixins with variables
+@mixin topToBottom-gradient($var1-color, $var2-color) {
+	background: -webkit-linear-gradient($var1-color, $var2-color); /* Chrome 10+, Saf5.1+ */
+	background: -moz-linear-gradient($var1-color, $var2-color); /* FF3.6+ */
+	background: -ms-linear-gradient($var1-color, $var2-color); /* IE10 */
+ 	background: -o-linear-gradient($var1-color, $var2-color); /* Opera 11.10+ */
+	background: linear-gradient($var1-color, $var2-color); /* W3C */
+}
+
+// Sass Mixins with variables
+@mixin special-border-radius($border-corner, $border-width, $border-style, $border-color){
+  border-radius: $border-corner $border-corner $border-corner $border-corner;
+  -moz-border-radius: $border-corner $border-corner $border-corner $border-corner;
+  -webkit-border-radius: $border-corner $border-corner $border-corner $border-corner;
+  border: $border-width $border-style $border-color;
+}
+
+// Sass If/Else Mixins
+@mixin imgFloat($float: left){
+  float: $float;
+  @if $float == left {
+    margin: 0em 1em 1em 0em;
+  }
+  @else if $float == right {
+    margin: 1em 0em 0em 1em; 
+  }
+  @else {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+// Sass If/Else Mixins
+@mixin changeFontVariant($wordColor: purple){
+  color: $wordColor;
+  @if $wordColor == purple {
+    font-variant: $header-font-variant;
+  }
+  @else {
+    font-variant: normal;
+  }
+}

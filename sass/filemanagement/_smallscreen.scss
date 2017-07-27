@@ -1,0 +1,46 @@
+/* SMALL Screen Width */
+/* pixel range: <=480px */
+/* includes type scaling */
+@media only screen and (max-width: 30em) {
+	header{
+		height: 130px ;
+		h1 {
+			padding: 80px 0 0 15px;
+			margin: 0;
+			font-size: 2.2em;
+		}
+	}
+
+	nav ul li{
+		font-size: 1em;
+	}
+
+	.col-1-2{
+		h2 {
+	 		font-size: 1.3em ;
+	 		line-height: 1.3;
+	 	}
+
+		p {
+			font-size: 0.95em; 
+			line-height: $standard-paragraph-line-size;
+		}
+	}
+
+	article{
+		 h2 {
+			font-size: 1.5em;
+			line-height: 1.5;
+		}
+
+		p {
+			font-size: 0.95em;
+			line-height: $standard-paragraph-line-size;
+		}
+	}
+
+	ul li{
+		font-size: 0.95em;
+		line-height: 1.4;
+	}
+}

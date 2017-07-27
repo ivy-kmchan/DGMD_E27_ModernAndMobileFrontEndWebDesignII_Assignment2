@@ -1,0 +1,81 @@
+/* LARGE Screen Width */
+/* pixel range min-width: 704px */
+/* includes type scaling */
+@media only screen and (min-width: 44em){
+	header {
+		background: url(../img/pacifica_shoreline_1200.jpg) no-repeat; /* swap header background image. */
+		width: 1200px;
+		height: 218px;
+		color: $word-color; // Sass Variables
+		font-size: 1.6em;
+		h1 {
+			padding: $standard-spacing-2;
+			margin: 0;
+			font-size: 2.5em;
+			a {
+				color: $word-color; // Sass Variables
+				text-decoration: none;
+			}
+		}
+	}
+
+	.col-1-2{
+		h2 {
+			font-size: 1.6em ;
+	 		line-height: 2;
+	 	}
+	 	p {
+	 		font-size: 1.1em;
+	 		line-height: $standard-paragraph-line-size;
+	 	}
+	}
+
+	article{
+		h2 {
+			font-size: 2.3em;
+			line-height: 1.5;
+		}
+		p {
+			font-size: 1.1em;
+			line-height: 1.6;
+		}
+	}
+
+	ul li{
+		font-size: 1.1em;
+		line-height: 1.4;
+	}
+}
+
+/* MEDIUM LARGE Screen Width */
+/* pixel range: 704px to 1008px */
+/* includes type scaling */
+@media only screen and (min-width: 44em) and (max-width: 63em) {
+ 	.col-1-2{
+		h2 {
+	 		font-size: 1.5em ;
+	 		line-height: 1.8;
+	 	}
+	 	p {
+	 		font-size: 1.01em;
+	 		line-height: $standard-paragraph-line-size;
+	 	}
+	}
+
+	article{
+	 	h2 {
+			font-size: 1.8em;
+			line-height: 1.3;
+		}
+
+		p {
+			font-size: 1.1em;
+			line-height: $standard-paragraph-line-size;
+		}
+	}
+
+	ul li{
+		font-size: 1.1em;
+		line-height: 1.4;
+	}
+}

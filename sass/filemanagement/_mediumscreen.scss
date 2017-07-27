@@ -1,0 +1,68 @@
+/* MEDIUM Screen Width */
+/* pixel range max-width: 704px */
+/* includes type scaling */
+@media only screen and (max-width: 44em) {
+	header {
+		background: url(../img/pacifica_shoreline_710.jpg) no-repeat; /* swap header background image. */
+		width: 100%;
+		height: 150px;
+
+		h1 {
+			padding: 100px 0 0 15px;
+			margin: 0;
+			font-size: 2.7em;
+			a {
+				color: $word-color; // Sass Variables
+				text-decoration: none;
+			}
+		}
+	}
+
+	nav ul a {
+		display: block;
+		float: none;
+		padding-left:3.333333%;
+	}
+
+	/* splits nav into 2 columns */
+	nav li{
+		&:nth-child(even) {
+			width: 50%;
+			float: right;
+		}
+
+		&:nth-child(odd) {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	.col-1-2 {
+		h2 {
+	 		font-size: 1.35em ;
+	 		line-height: 1.6;
+	 	}
+
+		p {
+			font-size: 1.05em; 
+			line-height: $standard-paragraph-line-size;
+		}
+	}
+
+	article{
+	 	h2 {
+			font-size: 1.67em;
+			line-height: 1.3;
+		}
+
+		p {
+			font-size: 1.05em;
+			line-height: 1.6;
+		}
+	}
+
+	ul li{
+		font-size: 1.05em;
+		line-height: 1.4;
+	}
+}

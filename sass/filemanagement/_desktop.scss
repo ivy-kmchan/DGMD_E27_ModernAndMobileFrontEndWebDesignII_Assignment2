@@ -1,0 +1,157 @@
+// desktop
+
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+	background-color: lighten($primary-color, 5%); // Sass Variables & Built-in Sass functions
+	font-size: 100%;
+}
+
+/* From "http://typecast.com/images/uploads/modernscale.css". Even though some tags are not in the htmls, they may appear in future additional htmls. */
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+h1 {
+	@include common-header-style; // Sass Mixins
+	font-family: 'Luckiest Guy', cursive; /* Google Fonts */ 
+}
+
+h2, h3, h4, h5, h6{
+	@extend h1; // Sass Extend - extend an existing style
+	font-family: 'Amita', cursive; /* Google Fonts */
+	// Compass - CSS3 Text Shadow & Sass Variables
+	@include text-shadow($text-shadow-color 1px 1px 0, $text-shadow-color 2px 2px 0, $text-shadow-color 1px 1px 0);
+}
+
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: $word-color; // Sass Variables
+	padding: 0 1em;
+}
+
+// Sass Nesting to 2 levels for "nav ul li" & "nav ul a"
+nav {
+	background-color: darken($theme-color, 10%); // Sass Variables & Built-in Sass functions
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		overflow: auto;
+		// "nav ul li" 
+		li {
+			font-family: 'Halant', "Times New Roman", Times, serif; /* 'Halant' is Google Fonts */
+			font-size: 1.2em;
+			display: inline;
+		}
+		// "nav ul a"
+		a {
+			color: $word-color; // Sass Variables
+			text-decoration: none;
+			font-weight: bold;
+			padding: 1em;
+			float: left;
+			display: inline-block;
+			// Sass nesting to 3 levels for "nav ul li a:hover"
+			&:hover {
+				color: $hover-word-color; // Sass Variables
+				background-color: lighten($hover-background-color, 30%); // Sass Variables & Built-in Sass functions
+			}
+		}
+	}
+}
+
+div.col-1-2 {
+	h2{
+		color: $theme-color; // Sass Variables
+	}
+
+	img{
+		max-width: 225px;
+		width: 100%;
+		border-radius: $border-radius; // Sass Variables
+		// Compass - CSS3 Box Shadow & Sass Variables
+		@include box-shadow ($standard-shadow $standard-shadow $standard-shadow grey);
+	}
+	a{
+		// Compass - CSS3 Links Colors & Built-in Sass Variables
+		@include link-colors (darken(#0DFFF9,10%), darken(#38D60C,10%), lighten(#FFD000,10%), #E8540C, #FF5BF2);
+	}
+}
+
+article {
+	//overflow: auto;
+	padding-top: $standard-spacing-1;
+	h2{
+		margin-top: 0.9em;
+		color: $theme-color; // Sass Variables
+		
+	}
+	img{
+		border-radius: $border-radius; // Sass Variables
+		// Compass - CSS3 Box Shadow & Sass Variables
+		@include box-shadow ($standard-shadow $standard-shadow $standard-shadow grey);
+	}
+}
+
+// Sass If/Else Mixins
+.floatLeft{
+	@include imgFloat(left); 
+}
+
+ .floatRight {
+    @include imgFloat(right);
+}
+
+ .floatNone {
+  	@include imgFloat(none); 
+}
+
+// Sass If/Else Mixins
+.keyWords{
+	@include changeFontVariant(purple);
+}
+
+aside {
+	padding-top: 0.3em;
+	li:hover{
+		color: opacify($hover-word-color, 0.6); // Sass Variables & Built-in Sass functions
+		font-weight: bold;
+	}
+	h3{
+		background-color: lighten(yellow, 20%);
+  		$border-corner: 0.8em;
+  		$border-width: 0.5em;
+  		$border-style: ridge;
+  		$border-color: $primary-color; // Sass Variables
+  		
+		// Sass Mixins with variables
+  		@include special-border-radius($border-corner, $border-width, $border-style, $primary-color);
+	}
+}
+
+footer {
+	clear: both;
+	padding: 2em 0;
+	margin: 3em 0;
+	background-color: $theme-color; // Sass Variables
+	color: $primary-color; // Sass Variables
+	text-align: center;
+	
+	// Sass Mixins with variables
+	$theme-color: darken($theme-color, 10%);
+	@include topToBottom-gradient($theme-color, pink);
+}

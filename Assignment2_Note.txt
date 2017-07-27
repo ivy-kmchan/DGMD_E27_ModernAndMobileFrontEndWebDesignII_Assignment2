@@ -1,0 +1,55 @@
+Name: Ka Man Chan
+Class: DGMD E-27
+Assignment: 2
+
+- URL for the assignment web page:
+http://kamanc.siteground.net/DGMD_E27_Assignment2/index.html
+
+- Brower/Operating System combinations:
+PC, Firefox
+
+- Partial files and starting line numbers for the below requirements:
+	* Variables section
+	-- Partial file: _variables.scss & _desktop.scss
+	-- Starting line numbers: 
+		-- line 1 in _variables.scss & 
+		   line 16 in _desktop.scss &
+		   line 42 in _desktop.scss (and various locations in _desktop.scss and other .scss files. Please search keywords "Sass Variables" for the locations of the Sass Variables.)
+
+	* Custom mixin (1 instance)
+	-- Partial file: _mixins.scss & _desktop.scss
+	-- Starting line numbers:
+		-- line 19 in _mixins.scss & line 141 in _desktop.scss
+
+	* Extend (1 instance)
+	-- Partial file: _desktop.scss
+	-- Starting line numbers: 
+		-- line 31 in _desktop.scss
+
+	* Nesting (1 instance with 2-level nesting)
+	-- Partial file: _desktop.scss
+	-- Starting line numbers: 
+		-- line 46 in _desktop.scss
+
+	* Built-in Sass functions (2 instances)
+	-- Partial file: _desktop.scss
+	-- Starting line numbers:
+		-- line 16 in _desktop.scss & line 48 in _desktop.scss
+
+	* If/else (1 instance)
+	-- Partial file: _mixins.scss & _desktop.scss
+	-- Starting line numbers:
+		-- line 42 in _mixins.scss & line 123 in _desktop.scss
+
+	* Compass mixins (3 instances)
+	-- Partial file: _compass.scss & _desktop.scss
+	-- Starting line numbers: 
+		-- line 1 in _compass.scss & 
+		   line 33 in _desktop.scss &
+		   line 86 in _desktop.scss &
+		   line 90 in _desktop.scss
+
+
+
+
+

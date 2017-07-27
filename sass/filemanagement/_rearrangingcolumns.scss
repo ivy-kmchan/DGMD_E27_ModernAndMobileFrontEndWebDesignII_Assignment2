@@ -1,0 +1,19 @@
+/* rearranging the columns in about.html */
+[class*="col-"] {
+	position: relative;
+}
+.col-push-1 {
+	left: 24%;
+}
+.col-pull-3 {
+	left: -72%;
+}
+
+/* MEDIUM Screen Width for re-arranging columns */
+/* pixel: 800 px */
+@media (max-width: 50em) {
+	.col-push-1,
+	.col-pull-3 {
+		left: 0;
+	}
+}

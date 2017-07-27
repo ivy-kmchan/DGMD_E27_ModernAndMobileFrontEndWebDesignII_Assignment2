@@ -1,0 +1,58 @@
+/* GRID SYSTEM */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+[class*='col-'] {
+	margin-left: 4%;
+	float: left;
+	min-height: 1px;
+}
+
+.col-1-2, 
+.col-1-4 {
+	width: 20%;
+}
+
+.col-2 {
+	width: 44%;
+}
+
+.col-3 {
+	width: 68%;
+}
+
+.col-4 {
+	width: 92%;
+}
+
+/* MEDIA QUERIES */
+/* Mobile LANDSCAPE Screen Sizes */
+/* pixel range: 480-800px */
+/* In Firefox, when I resized window to 800px width, it showed two columns. However, when I viewed in "View Responsive Layouts", it showed four columns. */  
+@media only screen and 
+	(min-width: 30em) and (max-width: 50em){
+
+	.col-1-2,
+	.col-2  {
+		width: 44%;
+	}
+
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+	}
+}
+
+
+/* Mobile PORTRAIT Screen Sizes */
+/* pixel range: <=480px */
+@media only screen and (max-width: 30em) {
+	[class*='col-'] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+}
